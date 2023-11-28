@@ -1,0 +1,1120 @@
+{
+    "annotations": {
+      "list": [
+        {
+          "builtIn": 1,
+          "datasource": {
+            "type": "grafana",
+            "uid": "-- Grafana --"
+          },
+          "enable": true,
+          "hide": true,
+          "iconColor": "rgba(0, 211, 255, 1)",
+          "name": "Annotations & Alerts",
+          "target": {
+            "limit": 100,
+            "matchAny": false,
+            "tags": [],
+            "type": "dashboard"
+          },
+          "type": "dashboard"
+        }
+      ]
+    },
+    "editable": true,
+    "fiscalYearStartMonth": 0,
+    "graphTooltip": 0,
+    "id": 2,
+    "links": [],
+    "liveNow": false,
+    "panels": [
+      {
+        "datasource": {
+          "type": "prometheus",
+          "uid": "EYbnYhX4z"
+        },
+        "description": "",
+        "fieldConfig": {
+          "defaults": {
+            "custom": {
+              "align": "auto",
+              "displayMode": "auto",
+              "filterable": false,
+              "inspect": false
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "percentage",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "#EAB839",
+                  "value": 75
+                },
+                {
+                  "color": "red",
+                  "value": 85
+                }
+              ]
+            }
+          },
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Время работы"
+              },
+              "properties": [
+                {
+                  "id": "unit",
+                  "value": "s"
+                },
+                {
+                  "id": "custom.width",
+                  "value": 114
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Всего ОЗУ"
+              },
+              "properties": [
+                {
+                  "id": "unit",
+                  "value": "bytes"
+                },
+                {
+                  "id": "custom.width",
+                  "value": 92
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "ОЗУ, %"
+              },
+              "properties": [
+                {
+                  "id": "unit",
+                  "value": "percent"
+                },
+                {
+                  "id": "thresholds",
+                  "value": {
+                    "mode": "percentage",
+                    "steps": [
+                      {
+                        "color": "green",
+                        "value": null
+                      },
+                      {
+                        "color": "orange",
+                        "value": 70
+                      },
+                      {
+                        "color": "red",
+                        "value": 80
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "min",
+                  "value": 0
+                },
+                {
+                  "id": "max",
+                  "value": 100
+                },
+                {
+                  "id": "custom.displayMode",
+                  "value": "lcd-gauge"
+                },
+                {
+                  "id": "custom.width",
+                  "value": 129
+                },
+                {
+                  "id": "decimals",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "ЦПУ, %"
+              },
+              "properties": [
+                {
+                  "id": "unit",
+                  "value": "percent"
+                },
+                {
+                  "id": "min",
+                  "value": 0
+                },
+                {
+                  "id": "max",
+                  "value": 100
+                },
+                {
+                  "id": "thresholds",
+                  "value": {
+                    "mode": "percentage",
+                    "steps": [
+                      {
+                        "color": "green",
+                        "value": null
+                      },
+                      {
+                        "color": "#EAB839",
+                        "value": 75
+                      },
+                      {
+                        "color": "red",
+                        "value": 85
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "custom.displayMode",
+                  "value": "lcd-gauge"
+                },
+                {
+                  "id": "custom.width",
+                  "value": 143
+                },
+                {
+                  "id": "decimals",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Диск, %"
+              },
+              "properties": [
+                {
+                  "id": "unit",
+                  "value": "percent"
+                },
+                {
+                  "id": "min",
+                  "value": 0
+                },
+                {
+                  "id": "max",
+                  "value": 100
+                },
+                {
+                  "id": "thresholds",
+                  "value": {
+                    "mode": "percentage",
+                    "steps": [
+                      {
+                        "color": "green",
+                        "value": null
+                      },
+                      {
+                        "color": "#EAB839",
+                        "value": 80
+                      },
+                      {
+                        "color": "red",
+                        "value": 90
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "custom.displayMode",
+                  "value": "lcd-gauge"
+                },
+                {
+                  "id": "decimals",
+                  "value": 1
+                },
+                {
+                  "id": "custom.width",
+                  "value": 137
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "SWAP, %"
+              },
+              "properties": [
+                {
+                  "id": "unit",
+                  "value": "percent"
+                },
+                {
+                  "id": "thresholds",
+                  "value": {
+                    "mode": "percentage",
+                    "steps": [
+                      {
+                        "color": "green",
+                        "value": null
+                      },
+                      {
+                        "color": "red",
+                        "value": 30
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "custom.displayMode",
+                  "value": "color-background"
+                },
+                {
+                  "id": "decimals",
+                  "value": 1
+                },
+                {
+                  "id": "custom.width",
+                  "value": 74
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "IP адрес"
+              },
+              "properties": [
+                {
+                  "id": "custom.width",
+                  "value": 162
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Имя хоста"
+              },
+              "properties": [
+                {
+                  "id": "custom.width",
+                  "value": 157
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Тип ОС"
+              },
+              "properties": [
+                {
+                  "id": "custom.width",
+                  "value": 68
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Название ОС"
+              },
+              "properties": [
+                {
+                  "id": "custom.width",
+                  "value": 188
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Версия ОС"
+              },
+              "properties": [
+                {
+                  "id": "custom.width",
+                  "value": 97
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Всего ядер"
+              },
+              "properties": [
+                {
+                  "id": "custom.width",
+                  "value": 90
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "IOwait, %"
+              },
+              "properties": [
+                {
+                  "id": "unit",
+                  "value": "percent"
+                },
+                {
+                  "id": "min",
+                  "value": 0
+                },
+                {
+                  "id": "max",
+                  "value": 100
+                },
+                {
+                  "id": "thresholds",
+                  "value": {
+                    "mode": "percentage",
+                    "steps": [
+                      {
+                        "color": "green",
+                        "value": null
+                      },
+                      {
+                        "color": "red",
+                        "value": 10
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "custom.displayMode",
+                  "value": "color-background"
+                },
+                {
+                  "id": "decimals",
+                  "value": 1
+                },
+                {
+                  "id": "custom.width",
+                  "value": 83
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Температура ЦПУ"
+              },
+              "properties": [
+                {
+                  "id": "unit",
+                  "value": "celsius"
+                },
+                {
+                  "id": "thresholds",
+                  "value": {
+                    "mode": "percentage",
+                    "steps": [
+                      {
+                        "color": "green",
+                        "value": null
+                      },
+                      {
+                        "color": "#EAB839",
+                        "value": 70
+                      },
+                      {
+                        "color": "red",
+                        "value": 75
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "custom.displayMode",
+                  "value": "color-background"
+                },
+                {
+                  "id": "custom.width",
+                  "value": 137
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "ОСЬ"
+              },
+              "properties": [
+                {
+                  "id": "custom.width",
+                  "value": 311
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "ОС"
+              },
+              "properties": [
+                {
+                  "id": "custom.width",
+                  "value": 308
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Логических ядер"
+              },
+              "properties": [
+                {
+                  "id": "custom.width",
+                  "value": 137
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Всего ядер"
+              },
+              "properties": [
+                {
+                  "id": "custom.width",
+                  "value": 94
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "ЦПУ ГГц (макс.)"
+              },
+              "properties": [
+                {
+                  "id": "decimals",
+                  "value": 1
+                },
+                {
+                  "id": "unit",
+                  "value": "rothz"
+                },
+                {
+                  "id": "custom.width",
+                  "value": 128
+                }
+              ]
+            }
+          ]
+        },
+        "gridPos": {
+          "h": 22,
+          "w": 23,
+          "x": 0,
+          "y": 0
+        },
+        "id": 2,
+        "options": {
+          "footer": {
+            "enablePagination": false,
+            "fields": "",
+            "reducer": [
+              "sum"
+            ],
+            "show": false
+          },
+          "frameIndex": 0,
+          "showHeader": true,
+          "sortBy": [
+            {
+              "desc": true,
+              "displayName": "Всего ОЗУ"
+            }
+          ]
+        },
+        "pluginVersion": "8.5.20",
+        "targets": [
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "EYbnYhX4z"
+            },
+            "editorMode": "code",
+            "exemplar": false,
+            "expr": "node_uname_info{job=~\"prometheus\"} - 0",
+            "format": "table",
+            "instant": true,
+            "legendFormat": "__auto",
+            "range": false,
+            "rawQuery": true,
+            "refId": "A"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "EYbnYhX4z"
+            },
+            "editorMode": "code",
+            "exemplar": false,
+            "expr": "node_memory_MemTotal_bytes{job=~\"prometheus\"} - 0 ",
+            "format": "table",
+            "hide": false,
+            "instant": true,
+            "interval": "",
+            "legendFormat": "__auto",
+            "range": false,
+            "rawQuery": true,
+            "refId": "B"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "EYbnYhX4z"
+            },
+            "editorMode": "code",
+            "exemplar": false,
+            "expr": "count(node_cpu_seconds_total{job=~\"prometheus\",mode='system'}) by (instance)",
+            "format": "table",
+            "hide": false,
+            "instant": true,
+            "range": false,
+            "refId": "C"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "EYbnYhX4z"
+            },
+            "editorMode": "code",
+            "exemplar": false,
+            "expr": "(1 - (node_memory_MemAvailable_bytes{job=~\"prometheus\"} / (node_memory_MemTotal_bytes{job=~\"prometheus\"})))* 100",
+            "format": "table",
+            "hide": false,
+            "instant": true,
+            "legendFormat": "__auto",
+            "range": false,
+            "rawQuery": false,
+            "refId": "D"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "EYbnYhX4z"
+            },
+            "editorMode": "code",
+            "exemplar": false,
+            "expr": "100 - (avg by(instance) (rate(node_cpu_seconds_total{job=\"prometheus\", mode=\"idle\"}[$__rate_interval])) * 100)",
+            "format": "table",
+            "hide": false,
+            "instant": true,
+            "range": false,
+            "refId": "E"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "EYbnYhX4z"
+            },
+            "editorMode": "code",
+            "exemplar": false,
+            "expr": "sum(time() - node_boot_time_seconds{job=~\"prometheus\"})by(instance)",
+            "format": "table",
+            "hide": false,
+            "instant": true,
+            "range": false,
+            "refId": "F"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "EYbnYhX4z"
+            },
+            "editorMode": "code",
+            "exemplar": false,
+            "expr": "(1 - (node_memory_SwapFree_bytes{job=~\"prometheus\"} / (node_memory_SwapTotal_bytes{job=~\"prometheus\"})))* 100",
+            "format": "table",
+            "hide": false,
+            "instant": true,
+            "legendFormat": "__auto",
+            "range": false,
+            "rawQuery": false,
+            "refId": "G"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "EYbnYhX4z"
+            },
+            "editorMode": "code",
+            "exemplar": false,
+            "expr": "max((node_filesystem_size_bytes{job=~\"prometheus\",fstype=~\"ext.?|xfs\"}-node_filesystem_free_bytes{job=~\"prometheus\",fstype=~\"ext.?|xfs\"}) *100/(node_filesystem_avail_bytes {job=~\"prometheus\",fstype=~\"ext.?|xfs\"}+(node_filesystem_size_bytes{job=~\"prometheus\",fstype=~\"ext.?|xfs\"}-node_filesystem_free_bytes{job=~\"prometheus\",fstype=~\"ext.?|xfs\"})))by(instance)",
+            "format": "table",
+            "hide": false,
+            "instant": true,
+            "range": false,
+            "refId": "H"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "EYbnYhX4z"
+            },
+            "editorMode": "builder",
+            "exemplar": false,
+            "expr": "node_os_version{job=\"prometheus\"} - 0",
+            "format": "table",
+            "hide": false,
+            "instant": true,
+            "legendFormat": "__auto",
+            "range": false,
+            "rawQuery": true,
+            "refId": "I"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "EYbnYhX4z"
+            },
+            "editorMode": "code",
+            "exemplar": false,
+            "expr": "(avg by(instance) (rate(node_cpu_seconds_total{job=\"prometheus\", mode=\"iowait\"}[$__rate_interval])) * 100)",
+            "format": "table",
+            "hide": false,
+            "instant": true,
+            "legendFormat": "__auto",
+            "range": false,
+            "refId": "J"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "EYbnYhX4z"
+            },
+            "editorMode": "code",
+            "exemplar": false,
+            "expr": "avg(node_hwmon_temp_celsius{job=\"prometheus\"})by(instance)",
+            "format": "table",
+            "hide": false,
+            "instant": true,
+            "range": false,
+            "refId": "K"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "EYbnYhX4z"
+            },
+            "editorMode": "code",
+            "exemplar": false,
+            "expr": "windows_os_info{job=~\"prometheus\"} - 0",
+            "format": "table",
+            "hide": false,
+            "instant": true,
+            "range": false,
+            "refId": "L"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "EYbnYhX4z"
+            },
+            "editorMode": "code",
+            "exemplar": false,
+            "expr": "avg(node_hwmon_temp_celsius{job=\"prometheus\"})by(instance)",
+            "format": "table",
+            "hide": false,
+            "instant": true,
+            "range": false,
+            "refId": "M"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "EYbnYhX4z"
+            },
+            "editorMode": "builder",
+            "exemplar": false,
+            "expr": "windows_cs_hostname",
+            "format": "table",
+            "hide": false,
+            "instant": true,
+            "legendFormat": "__auto",
+            "range": false,
+            "refId": "N"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "EYbnYhX4z"
+            },
+            "editorMode": "code",
+            "exemplar": false,
+            "expr": "100 - (avg by(instance) (rate(windows_cpu_time_total{job=\"prometheus\", mode=\"idle\"}[$__rate_interval])) * 100)",
+            "format": "table",
+            "hide": false,
+            "instant": true,
+            "legendFormat": "__auto",
+            "range": false,
+            "refId": "O"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "EYbnYhX4z"
+            },
+            "editorMode": "code",
+            "exemplar": false,
+            "expr": "(1 - (windows_os_physical_memory_free_bytes{job=~\"prometheus\"} / (windows_cs_physical_memory_bytes{job=~\"prometheus\"})))* 100",
+            "format": "table",
+            "hide": false,
+            "instant": true,
+            "legendFormat": "__auto",
+            "range": false,
+            "refId": "P"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "EYbnYhX4z"
+            },
+            "editorMode": "code",
+            "exemplar": false,
+            "expr": "sum(time() - windows_system_system_up_time{job=~\"prometheus\"})by(instance)",
+            "format": "table",
+            "hide": false,
+            "instant": true,
+            "range": false,
+            "refId": "Q"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "EYbnYhX4z"
+            },
+            "editorMode": "code",
+            "exemplar": false,
+            "expr": "windows_cs_logical_processors{job=~\"prometheus\"} - 0",
+            "format": "table",
+            "hide": false,
+            "instant": true,
+            "range": false,
+            "refId": "R"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "EYbnYhX4z"
+            },
+            "editorMode": "code",
+            "exemplar": false,
+            "expr": "windows_cs_physical_memory_bytes{job=~\"prometheus\"} - 0",
+            "format": "table",
+            "hide": false,
+            "instant": true,
+            "range": false,
+            "refId": "S"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "EYbnYhX4z"
+            },
+            "editorMode": "code",
+            "exemplar": false,
+            "expr": "max((windows_logical_disk_size_bytes{job=~\"prometheus\", volume !~\"HarddiskVolume.+\"}-windows_logical_disk_free_bytes{job=~\"prometheus\", volume !~\"HarddiskVolume.+\"}) / (windows_logical_disk_size_bytes{job=~\"prometheus\", volume !~\"HarddiskVolume.+\"})*100)by(instance)",
+            "format": "table",
+            "hide": false,
+            "instant": true,
+            "range": false,
+            "refId": "T"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "EYbnYhX4z"
+            },
+            "editorMode": "code",
+            "exemplar": false,
+            "expr": "avg(node_cpu_frequency_max_hertz{job=\"prometheus\"})by(instance)",
+            "format": "table",
+            "hide": false,
+            "instant": true,
+            "range": false,
+            "refId": "U"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "EYbnYhX4z"
+            },
+            "editorMode": "code",
+            "exemplar": false,
+            "expr": "avg(windows_cpu_core_frequency_mhz{job=\"prometheus\"})by(instance)*1000000",
+            "format": "table",
+            "hide": false,
+            "instant": true,
+            "range": false,
+            "refId": "V"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "EYbnYhX4z"
+            },
+            "hide": false,
+            "refId": "W"
+          }
+        ],
+        "title": "Состояние узлов",
+        "transformations": [
+          {
+            "id": "merge",
+            "options": {}
+          },
+          {
+            "id": "calculateField",
+            "options": {
+              "alias": "Имя хоста",
+              "mode": "reduceRow",
+              "reduce": {
+                "include": [
+                  "nodename",
+                  "hostname"
+                ],
+                "reducer": "lastNotNull"
+              }
+            }
+          },
+          {
+            "id": "calculateField",
+            "options": {
+              "alias": "Linux ОС",
+              "mode": "reduceRow",
+              "reduce": {
+                "include": [
+                  "name",
+                  "Value #I",
+                  "sysname"
+                ],
+                "reducer": "uniqueValues"
+              }
+            }
+          },
+          {
+            "id": "calculateField",
+            "options": {
+              "alias": "ОС",
+              "mode": "reduceRow",
+              "reduce": {
+                "include": [
+                  "product",
+                  "Linux ОС"
+                ],
+                "reducer": "firstNotNull"
+              },
+              "replaceFields": false
+            }
+          },
+          {
+            "id": "calculateField",
+            "options": {
+              "alias": "ЦПУ, %",
+              "mode": "reduceRow",
+              "reduce": {
+                "include": [
+                  "Value #O",
+                  "Value #E"
+                ],
+                "reducer": "lastNotNull"
+              }
+            }
+          },
+          {
+            "id": "calculateField",
+            "options": {
+              "alias": "ОЗУ, %",
+              "mode": "reduceRow",
+              "reduce": {
+                "include": [
+                  "Value #D",
+                  "Value #P"
+                ],
+                "reducer": "lastNotNull"
+              }
+            }
+          },
+          {
+            "id": "calculateField",
+            "options": {
+              "alias": "Время работы",
+              "mode": "reduceRow",
+              "reduce": {
+                "include": [
+                  "Value #F",
+                  "Value #Q"
+                ],
+                "reducer": "lastNotNull"
+              }
+            }
+          },
+          {
+            "id": "calculateField",
+            "options": {
+              "alias": "Всего ядер",
+              "mode": "reduceRow",
+              "reduce": {
+                "include": [
+                  "Value #C",
+                  "Value #R"
+                ],
+                "reducer": "lastNotNull"
+              }
+            }
+          },
+          {
+            "id": "calculateField",
+            "options": {
+              "alias": "Всего ОЗУ",
+              "mode": "reduceRow",
+              "reduce": {
+                "include": [
+                  "Value #B",
+                  "Value #S"
+                ],
+                "reducer": "lastNotNull"
+              }
+            }
+          },
+          {
+            "id": "calculateField",
+            "options": {
+              "alias": "Диск, %",
+              "mode": "reduceRow",
+              "reduce": {
+                "include": [
+                  "Value #H",
+                  "Value #T"
+                ],
+                "reducer": "lastNotNull"
+              }
+            }
+          },
+          {
+            "id": "calculateField",
+            "options": {
+              "alias": "ЦПУ ГГц (макс.)",
+              "mode": "reduceRow",
+              "reduce": {
+                "include": [
+                  "Value #U",
+                  "Value #V"
+                ],
+                "reducer": "lastNotNull"
+              }
+            }
+          },
+          {
+            "id": "filterFieldsByName",
+            "options": {
+              "include": {
+                "names": [
+                  "instance",
+                  "Value #G",
+                  "Value #J",
+                  "Value #K",
+                  "Имя хоста",
+                  "ОС",
+                  "ЦПУ, %",
+                  "ОЗУ, %",
+                  "Время работы",
+                  "Всего ядер",
+                  "Всего ОЗУ",
+                  "Диск, %",
+                  "ЦПУ ГГц (макс.)"
+                ]
+              }
+            }
+          },
+          {
+            "id": "organize",
+            "options": {
+              "excludeByName": {
+                "Value #E": true,
+                "Value #O": true,
+                "hostname": true,
+                "name": true,
+                "nodename": true,
+                "product": false,
+                "Название ОС": false
+              },
+              "indexByName": {
+                "Value #G": 10,
+                "Value #J": 11,
+                "Value #K": 12,
+                "instance": 0,
+                "Время работы": 2,
+                "Всего ОЗУ": 4,
+                "Всего ядер": 5,
+                "Диск, %": 9,
+                "Имя хоста": 1,
+                "ОЗУ, %": 8,
+                "ОС": 3,
+                "ЦПУ ГГц (макс.)": 6,
+                "ЦПУ, %": 7
+              },
+              "renameByName": {
+                "Value #B": "Всего ОЗУ",
+                "Value #C": "Ядер",
+                "Value #D": "Память, %",
+                "Value #E": "Процессор, %",
+                "Value #F": "Время работы",
+                "Value #G": "SWAP, %",
+                "Value #H": "Диск, %",
+                "Value #I": "Версия ОС",
+                "Value #J": "IOwait, %",
+                "Value #K": "Температура ЦПУ",
+                "Value #M": "Температура ЦПУ",
+                "build_id": "Название ОС",
+                "instance": "IP адрес",
+                "name": "Название ОС",
+                "nodename": "Имя хоста",
+                "product": "Название ОС",
+                "sysname": "Тип ОС"
+              }
+            }
+          }
+        ],
+        "type": "table"
+      }
+    ],
+    "refresh": "5s",
+    "schemaVersion": 36,
+    "style": "dark",
+    "tags": [],
+    "templating": {
+      "list": []
+    },
+    "time": {
+      "from": "now-6h",
+      "to": "now"
+    },
+    "timepicker": {},
+    "timezone": "",
+    "title": "Андрей Сарайкин",
+    "uid": "tmXwr2XVz",
+    "version": 43,
+    "weekStart": ""
+  }
